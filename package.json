@@ -4,8 +4,9 @@
   "description": "Layout Motorola E4 Plus",
   "main": "index.js",
   "scripts": {
-    "test": "jest --env=jsdom --watch",
-    "dev": "webpack --config ./webpack.config.js -p --progress --watch"
+    "test": "jest --env=jsdom",
+    "dev": "webpack --config ./webpack.config.js -p --progress --watch",
+    "prod": "webpack --config ./webpack.config.js -p --progress"
   },
   "jest": {
     "moduleFileExtensions": ["js", "jsx"],

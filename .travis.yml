@@ -14,7 +14,7 @@ install:
   - yarn install
 
 before_script:
-  - yarn run dev
+  - yarn run prod
 
 script:
   - yarn run test
