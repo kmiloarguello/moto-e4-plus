@@ -17,4 +17,4 @@ before_script:
   - yarn run dev
 
 script:
-- yarn run test
+  - yarn run test
