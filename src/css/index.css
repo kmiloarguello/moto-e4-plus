@@ -7,49 +7,74 @@ body {
     grid-template-columns: minmax(auto, 90%);
     grid-template-rows: 700px 300px 500px 500px 300px;
     justify-content: center;
-    background: #ddd;
+    
     & section {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       border: 0.5px solid fuchsia;
+      background: #ddd;
     }
     & .section1 {
-      & .A{
+      & .A {
         border: 3px solid blue;
         grid-column: 1 / span 2;
       }
-      & .B{
+      & .B {
         border: 3px solid blue;
       }
     }
     & .section2 {
-      & .A, & .B, & .C{
+      & .A,
+      & .B,
+      & .C {
         border: 3px solid blue;
       }
     }
     & .section3 {
       grid-template-columns: 10% 1fr 10%;
-      & .A{
+      & .A {
         border: 3px solid blue;
         grid-column: 2;
       }
     }
     & .section4 {
       grid-template-columns: 10% 1fr 1fr 10%;
-      & .A{
+      & .A {
         border: 3px solid blue;
         grid-column: 2;
       }
-      & .B{
+      & .B {
         border: 3px solid blue;
         grid-column: 3;
       }
     }
     & .section5 {
       grid-template-columns: 10% 1fr 10%;
-      & .A{
+      & .A {
         border: 3px solid blue;
         grid-column: 2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr !important;
+    & section {
+      grid-template-columns: 1fr !important;
+    }
+    & .section3, & .section5 {
+      & .A {
+        grid-column: 1 !important;
+      }
+    }
+    & .section4 {
+      & .A {
+        grid-column: 1 !important;
+      }
+      & .B {
+        grid-column: 1 !important;
       }
     }
   }
