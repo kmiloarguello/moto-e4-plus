@@ -5,6 +5,5 @@ import { render } from "react-testing-library";
 describe("Landing page", () => {
   test("Moto component render correctly", () => {
     const { debug } = render(<Moto />);
-    expect(true).toBe(true);
   });
 });

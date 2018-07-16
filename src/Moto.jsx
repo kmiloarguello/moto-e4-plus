@@ -1,11 +1,46 @@
 import React, { Component } from "react";
-import styles from './css/index.css'
+import styles from "./css/index.css";
+
+import "animate.css";
+import WOW from "wowjs";
+
+// Components
+import Home from "./components/Home.jsx";
+import Carousel from "./components/Carousel.jsx";
 
 export default class Moto extends Component {
+  componentDidMount() {
+    const wow = new WOW.WOW();
+    wow.init();
+  }
   render() {
-    return <section className={styles.post_list}>
-      <a href="Hola">Hola</a>
-      <h1>Hola Camilo</h1>
-    </section>;
+    return (
+      <div className={styles.container}>
+        <Home />
+        <Carousel />
+        {/*<section className={styles.section3}>
+          <div className={styles.row}>
+            <div className={styles.column}>
+              <div className={styles.A}>A</div>
+            </div>
+          </div>
+        </section>
+        <section className={styles.section4}>
+          <div className={styles.row}>
+            <div className={styles.column}>
+              <div className={styles.A}>A</div>
+              <div className={styles.B}>B</div>
+            </div>
+          </div>
+        </section>
+        <section className={styles.section5}>
+          <div className={styles.row}>
+            <div className={styles.column}>
+              <div className={styles.A}>A</div>
+            </div>
+          </div>
+        </section>*/}
+      </div>
+    );
   }
 }

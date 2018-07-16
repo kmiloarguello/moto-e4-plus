@@ -1,8 +1,90 @@
+@import "./variables.css";
+@import "./home.css";
+@import "./carousel.css";
+
 body {
-  font-family: "Arial";
-  & section {
-    & a {
-      color: red;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto";
+  & .container {
+    display: grid;
+    grid-template-rows: 700px 350px 500px 500px 300px;
+
+    & .row {
+      display: grid;
+      grid-template-columns: minmax(auto, 90%);
+      justify-content: center;
+    }
+    & .column {
+      display: grid;
+    }
+    & .section3 {
+      background: #ddd;
+      & .column {
+        grid-template-columns: 10% 1fr 10%;
+        & .A {
+          border: 3px solid blue;
+          grid-column: 2;
+        }
+      }
+    }
+    & .section4 {
+      & .column {
+        grid-template-columns: 10% 1fr 1fr 10%;
+        & .A {
+          border: 3px solid blue;
+          grid-column: 2;
+        }
+        & .B {
+          border: 3px solid blue;
+          grid-column: 3;
+        }
+      }
+    }
+    & .section5 {
+      background: #ddd;
+      & .column {
+        grid-template-columns: 10% 1fr 10%;
+        & .A {
+          border: 3px solid blue;
+          grid-column: 2;
+        }
+      }
+    }
+  }
+}
+
+/*
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    & .section3,
+    & .section5 {
+      grid-template-columns: 1fr !important;
+      & .A {
+        grid-column: 1 !important;
+      }
+    }
+    & .section4 {
+      grid-template-columns: 1fr 1fr !important;
+      & .A {
+        grid-column: 1 !important;
+      }
+      & .B {
+        grid-column: 2 !important;
+      }
+    }
+  }
+}
+*/
+
+@media screen and (max-width: 480px) {
+  .container {
+    grid-template-rows: auto !important;
+    & section {
+      overflow-x: hidden;
+    }
+    & .row {
+      grid-template-columns: 1fr !important;
     }
   }
 }

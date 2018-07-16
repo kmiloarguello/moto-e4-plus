@@ -1,0 +1,51 @@
+.section2 {
+  background-image: url("../arquivos/img/section2/blue-background-section-2.png");
+  background-position: left top;
+  background-repeat: repeat-x;
+  background-size: 33% 100%;
+  color: white;
+  & .column {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 350px;
+    & .A,
+    & .B {
+      border-right: 1px solid white;
+    }
+    & .A,
+    & .B,
+    & .C {
+      & h3 {
+        font-weight: bold;
+        padding-left: 30px;
+      }
+      & p {
+        font-weight: lighter;
+        font-size: 1em;
+        max-width: 80%;
+        padding-left: 30px;
+      }
+      & p:first-of-type {
+        font-size: 0.8em;
+        margin-top: -20px;
+        max-width: 50%;
+      }
+      & img {
+        width: 200px;
+        display: block;
+        margin: auto;
+      }
+      & #bateria {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section2 {
+    background-size: auto;
+    & .column {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}
