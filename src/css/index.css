@@ -13,10 +13,9 @@ body {
     }
     & .column {
       display: grid;
-      border: 1px solid fuchsia;
     }
     & .section1 {
-      & #bg{
+      & #bg {
         margin: 0;
         top: 0;
         left: 0;
@@ -27,11 +26,46 @@ body {
       }
       & .column {
         grid-template-columns: 2fr 1fr;
+        margin-top: 50px;
         & .A {
-          border: 3px solid blue;
+          color: white;
+          & img {
+            width: 500px;
+          }
+          & h1 {
+            font-size: 5em;
+            line-height: 70px;
+            margin: 20px 0 0 0;
+          }
+          & span {
+            color: yellow;
+          }
+          & button {
+            background-color: white;
+            color: #0055ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px;
+            text-decoration: none;
+            border: none;
+            margin-top: 20px;
+          }
         }
         & .B {
-          border: 3px solid blue;
+          & img{
+            position: absolute;
+          }
+          & #phone_front{
+            width: 210px;
+            z-index: 2;
+            margin-top: 140px;
+            margin-left: 150px;
+          }
+          & #phone_back{
+            width: 180px;
+            margin-top: 75px;
+            margin-left: 10px;
+          }
         }
       }
     }

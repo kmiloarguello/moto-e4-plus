@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import styles from "./css/index.css";
 import motorola_logo from "./arquivos/img/motorola-logo.png";
 import seccion1_fondo from "./arquivos/img/background-section-1.jpg";
+import phone_back from './arquivos/img/section1/back.png'
+import phone_front from './arquivos/img/section1/front.png'
+
 
 export default class Moto extends Component {
   render() {
     return (
       <div className={styles.container}>
         <section className={styles.section1}>
-          
           <div className={styles.row}>
             <div className={styles.column}>
               <div className={styles.A}>
@@ -27,7 +29,10 @@ export default class Moto extends Component {
                 </h3>
                 <button>Comprar</button>
               </div>
-              <div className={styles.B}>B</div>
+              <div className={styles.B}>
+                <img id={styles.phone_front} src={phone_front} alt="Telefono frontal"/>
+                <img id={styles.phone_back}src={phone_back} alt="Telefono atras"/>
+              </div>
             </div>
           </div>
           <img id={styles.bg} src={seccion1_fondo} alt="Fondo de seccion1" />
