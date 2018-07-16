@@ -65,6 +65,8 @@
     "postcss": "^6.0.23",
     "postcss-cli": "^5.0.1",
     "postcss-cssnext": "^3.1.0",
+    "postcss-font-magician": "^2.2.1",
+    "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.6",
     "preload-webpack-plugin": "^2.3.0",
     "react-testing-library": "^4.1.2",

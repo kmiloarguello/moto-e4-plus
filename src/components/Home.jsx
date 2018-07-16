@@ -11,11 +11,13 @@ export default class Home extends Component {
         <div className={styles.row}>
           <div className={styles.column}>
             <div className={styles.A}>
-              <img src={motorola_logo} alt="Logo de Motorola" />
+            <img src={motorola_logo} alt="Logo de Motorola" />
               <h1>
                 <span>nuevo</span>
                 <br />moto e<sup>4</sup> plus
               </h1>
+            </div>
+            <div className={styles.B}>
               <h3 className="wow fadeIn" data-wow-delay="1s">
                 Pantalla de <br />
                 <span>5.5" HD</span>
@@ -26,7 +28,7 @@ export default class Home extends Component {
               </h3>
               <button className="wow fadeIn" data-wow-delay="2s">Comprar</button>
             </div>
-            <div className={styles.B}>
+            <div className={styles.C}>
               <img
                 id={styles.phone_front}
                 src={phone_front}
