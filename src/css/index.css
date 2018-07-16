@@ -4,7 +4,7 @@ body {
   font-family: "Arial";
   & .container {
     display: grid;
-    grid-template-rows: 700px 300px 500px 500px 300px;
+    grid-template-rows: 700px 350px 500px 500px 300px;
 
     & .row {
       display: grid;
@@ -17,17 +17,8 @@ body {
     & .section1 {
       background-image: url("../arquivos/img/background-section-1.jpg");
       background-repeat: no-repeat;
-      background-position: left top;
+      background-position: left bottom;
       background-size: 100%;
-      & #bg {
-        margin: 0;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        position: absolute;
-        z-index: -1;
-      }
       & .column {
         grid-template-columns: 2fr 1fr;
         margin-top: 50px;
@@ -39,7 +30,15 @@ body {
           & h1 {
             font-size: 5em;
             line-height: 20px;
-            margin: 10px 0 0 0;
+            margin: 20px 0 0 0;
+            letter-spacing: 1px;
+          }
+          & h3 {
+            margin-top: 30px;
+            line-height: 25px;
+            & span {
+              font-size: 1.8em;
+            }
           }
           & span {
             color: yellow;
@@ -56,16 +55,16 @@ body {
           }
         }
         & .B {
-          & img{
+          & img {
             position: absolute;
           }
-          & #phone_front{
+          & #phone_front {
             width: 210px;
             z-index: 2;
             margin-top: 140px;
             margin-left: 150px;
           }
-          & #phone_back{
+          & #phone_back {
             width: 180px;
             margin-top: 75px;
             margin-left: 10px;
@@ -74,12 +73,44 @@ body {
       }
     }
     & .section2 {
+      background-image: url("../arquivos/img/section2/blue-background-section-2.png");
+      background-position: left top;
+      background-repeat: repeat-x;
+      background-size: 33% 100%;
+      color: white;
       & .column {
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 350px;
+        & .A,
+        & .B {
+          border-right: 1px solid white;
+        }
         & .A,
         & .B,
         & .C {
-          border: 3px solid blue;
+          & h3 {
+            font-weight: bold;
+            padding-left: 30px;
+          }
+          & p {
+            font-weight: lighter;
+            font-size: 1em;
+            max-width: 80%;
+            padding-left: 30px;
+          }
+          & p:first-of-type {
+            font-size: 0.8em;
+            margin-top: -20px;
+            max-width: 40%;
+          }
+          & img {
+            width: 200px;
+            display: block;
+            margin: auto;
+          }
+          & #bateria{
+            width: 300px;
+          }
         }
       }
     }
@@ -119,7 +150,7 @@ body {
   }
 }
 
-/* @media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .container {
     & .section3,
     & .section5 {
@@ -139,6 +170,7 @@ body {
     }
   }
 }
+/*
 @media screen and (max-width: 480px) {
   .container {
     grid-template-columns: 1fr !important;
