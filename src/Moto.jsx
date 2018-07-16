@@ -18,7 +18,7 @@ export default class Moto extends Component {
       <div className={styles.container}>
         <Home />
         <Carousel />
-        <section className={styles.section3}>
+        {/*<section className={styles.section3}>
           <div className={styles.row}>
             <div className={styles.column}>
               <div className={styles.A}>A</div>
@@ -39,7 +39,7 @@ export default class Moto extends Component {
               <div className={styles.A}>A</div>
             </div>
           </div>
-        </section>
+        </section>*/}
       </div>
     );
   }

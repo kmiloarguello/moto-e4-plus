@@ -65,13 +65,6 @@ module.exports = {
       inject: true,
       template: path.resolve(__dirname, "src/html/index.html"),
       title: "Moto e4 Plus"
-    }),
-    new CopyWebpackPlugin([
-      {
-          from: path.resolve(__dirname, "src/lib/animate.min.css"),
-          to: path.resolve(__dirname, "dist/css/animate.min.css"),
-          toType: 'file'
-      }
-]),
+    })
   ]
 };
