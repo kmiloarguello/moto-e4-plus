@@ -4,7 +4,7 @@
   "description": "Layout Motorola E4 Plus",
   "main": "index.js",
   "scripts": {
-    "test": "jest --env=jsdom",
+    "test": "jest --env=jsdom --watch",
     "dev": "webpack --config ./webpack.config.js -p --progress --watch",
     "prod": "webpack --config ./webpack.config.js -p --progress"
   },
@@ -22,7 +22,7 @@
     ],
     "moduleNameMapper": {
       "\\.(css|less|sass)$": "<rootDir>/src/__mocks__/styleMock.js",
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+      "\\.(gif|jpg|png|ttf|eot|svg)$": "<rootDir>/src/__mocks__/fileMock.js"
     }
   },
   "repository": {

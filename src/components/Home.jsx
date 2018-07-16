@@ -5,13 +5,16 @@ import phone_back from "../arquivos/img/section1/back.png";
 import phone_front from "../arquivos/img/section1/front.png";
 
 export default class Home extends Component {
+  handleBuy() {
+    console.log("Should make something!");
+  }
   render() {
     return (
       <section className={styles.section1}>
         <div className={styles.row}>
           <div className={styles.column}>
             <div className={styles.A}>
-            <img src={motorola_logo} alt="Logo de Motorola" />
+              <img src={motorola_logo} alt="Logo de Motorola" />
               <h1>
                 <span>nuevo</span>
                 <br />moto e<sup>4</sup> plus
@@ -26,7 +29,13 @@ export default class Home extends Component {
                 Una sola carga hasta <br />
                 <span>2 días de batería</span>
               </h3>
-              <button className="wow fadeIn" data-wow-delay="2s">Comprar</button>
+              <button
+                onClick={() => this.handleBuy()}
+                className="wow fadeIn"
+                data-wow-delay="2s"
+              >
+                Comprar
+              </button>
             </div>
             <div className={styles.C}>
               <img
