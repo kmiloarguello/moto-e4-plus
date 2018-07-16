@@ -1,6 +1,7 @@
 # Motorola e4 plus
 
 [![Build Status](https://travis-ci.org/kmiloarguello/moto-e4-plus.svg?branch=master)](https://travis-ci.org/kmiloarguello/moto-e4-plus)
+![npm](https://img.shields.io/npm/l/express.svg)
 
 Maquetación del sitio web del nuevo Moto e4 Plus, donde se resaltan las características principales del producto en cuanto a estética, diseño y ergonomía. Así como sus funcionalidades de cámara, batería y huella digital.
 
