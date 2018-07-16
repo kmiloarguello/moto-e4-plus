@@ -5,6 +5,9 @@ import phone_back from "../arquivos/img/section1/back.png";
 import phone_front from "../arquivos/img/section1/front.png";
 
 export default class Home extends Component {
+  handleBuy() {
+    console.log("Should make something!");
+  }
   render() {
     return (
       <section className={styles.section1}>
@@ -16,6 +19,8 @@ export default class Home extends Component {
                 <span>nuevo</span>
                 <br />moto e<sup>4</sup> plus
               </h1>
+            </div>
+            <div className={styles.B}>
               <h3 className="wow fadeIn" data-wow-delay="1s">
                 Pantalla de <br />
                 <span>5.5" HD</span>
@@ -24,9 +29,15 @@ export default class Home extends Component {
                 Una sola carga hasta <br />
                 <span>2 días de batería</span>
               </h3>
-              <button className="wow fadeIn" data-wow-delay="2s">Comprar</button>
+              <button
+                onClick={() => this.handleBuy()}
+                className="wow fadeIn"
+                data-wow-delay="2s"
+              >
+                Comprar
+              </button>
             </div>
-            <div className={styles.B}>
+            <div className={styles.C}>
               <img
                 id={styles.phone_front}
                 src={phone_front}

@@ -1,0 +1,130 @@
+.section1 {
+  background-image: url("../arquivos/img/background-section-1.jpg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100%;
+  & .column {
+    grid-template-areas:
+      "s1-title s1-title s1-images "
+      "s1-description s1-description s1-images"
+      "s1-description s1-description s1-images";
+    grid-template-columns: 25% 25% 1fr;
+    margin-top: 50px;
+    color: white;
+
+    & span {
+      color: yellow;
+    }
+    & .A {
+      grid-area: s1-title;
+      & img {
+        width: 500px;
+      }
+      & h1 {
+        font-weight: 700;
+        font-size: 5em;
+        line-height: 20px;
+        margin: 20px 0 0 0;
+        letter-spacing: 1px;
+      }
+    }
+    & .B {
+      grid-area: s1-description;
+      & h3 {
+        font-weight: 500;
+        margin-top: 30px;
+        line-height: 25px;
+        & span {
+          font-size: 1.8em;
+        }
+      }
+
+      & button {
+        background-color: white;
+        color: var(--blue-light);
+        font-size: 1.2em;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 15px 20px;
+        text-decoration: none;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: all ease-in-out .2s;
+        &:hover{
+          background-color: var(--blue-light);
+          color: white; 
+        }
+      }
+    }
+    & .C {
+      position: relative;
+      grid-area: s1-images;
+      & img {
+        position: absolute;
+        left: 250px;
+        top: -20px;
+      }
+      & #phone_front {
+        width: 210px;
+        z-index: 2;
+        margin-top: 140px;
+        margin-left: 150px;
+      }
+      & #phone_back {
+        width: 180px;
+        margin-top: 75px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section1 {
+    background-size: cover !important;
+    & .column {
+      grid-template-columns: 1fr !important;
+      grid-template-rows: 200px 400px 1fr !important;
+
+      grid-template-areas:
+        "s1-title"
+        "s1-images"
+        "s1-description" !important;
+      & .A,
+      & .B {
+        display: block;
+        margin: auto;
+      }
+      & .A {
+        & img {
+          width: 300px !important;
+        }
+        & h1 {
+          font-size: 3em !important;
+        }
+      }
+      & .B {
+        & h3 {
+          font-size: 0.9em;
+          & span {
+            font-size: 1.5em;
+          }
+        }
+      }
+      & .C {
+        & img {
+          left: 0 !important;
+        }
+        & #phone_front {
+          width: 180px !important;
+          margin-top: 20px !important;
+        }
+        & #phone_back {
+          width: 150px !important;
+          margin-top: 20px !important;
+        }
+      }
+    }
+  }
+}
