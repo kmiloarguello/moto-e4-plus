@@ -1,13 +1,35 @@
 .section4 {
   & .column {
+    border: 1px dashed red;
+    grid-template-areas:
+      ". s4-title s4-image ."
+      ". s4-description s4-image ."
+      ". s4-description s4-image .";
+
     grid-template-columns: 10% 1fr 1fr 10%;
     & .A {
+      grid-area: s4-title;
       border: 3px solid blue;
-      grid-column: 2;
     }
     & .B {
+      grid-area: s4-description;
       border: 3px solid blue;
-      grid-column: 3;
+    }
+    & .C {
+      grid-area: s4-image;
+      border: 3px solid blue;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section4 {
+    & .column {
+      grid-template-columns: 1fr !important;
+      grid-template-areas:
+        "s4-title"
+        "s4-image"
+        "s4-description";
     }
   }
 }
