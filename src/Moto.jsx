@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styles from "./css/index.css";
 
-// import "animate.css";
 import WOW from "wowjs";
 
 // Components
@@ -23,7 +22,7 @@ export default class Moto extends Component {
         <Carousel />
         <Content />
         <Slider />
-        {/*<Footer />*/}
+        <Footer />
       </div>
     );
   }

@@ -140,7 +140,6 @@
     }
     & .C {
       & img {
-        border: 2px dashed fuchsia;
         left: 30px !important;
       }
       & #phone_front {

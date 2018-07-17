@@ -55,9 +55,9 @@
 }
 @media screen and (min-width: 660px) and (max-width: 1024px) {
   ul {
-    text-decoration: none;
-    display: block;
-    margin: auto;
+    & li{
+        margin: 0 !important;
+    }
   }
 }
 @media screen and (max-width: 659px) {

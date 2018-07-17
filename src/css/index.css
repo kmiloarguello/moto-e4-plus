@@ -27,9 +27,15 @@ body {
   }
 }
 
+@media screen and (min-width: 660px) and (max-width: 2000px) {
+  .container {
+    grid-template-rows: var(--h-s1) var(--h-s2) auto var(--h-s4) auto !important;
+  }
+}
+
 @media screen and (max-width: 659px) {
   .container {
-    grid-template-rows: auto !important;
+    grid-template-rows: auto auto auto auto auto !important;
     & section {
       overflow: hidden;
     }

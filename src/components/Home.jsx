@@ -31,7 +31,7 @@ export default class Home extends Component {
               </h3>
               <button
                 onClick={() => this.handleBuy()}
-                className="wow fadeIn"
+                className="wow bounceIn"
                 data-wow-delay="2s"
               >
                 Comprar

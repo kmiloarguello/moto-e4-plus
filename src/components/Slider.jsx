@@ -24,7 +24,16 @@ export default class Slider extends Component {
     };
   }
   componentDidMount() {
+    let myself = this;
     this.showSlides(this.state.slideIndex);
+    setTimeout(() => {
+      setInterval(function() {
+        myself.setState({
+          slideIndex: myself.state.slideIndex + 1
+        });
+        myself.showSlides(myself.state.slideIndex);
+      }, 4000);
+    }, 4000);
   }
   currentSlide(n) {
     this.showSlides((this.state.slideIndex = n));
@@ -92,14 +101,12 @@ export default class Slider extends Component {
             title="Grande y brillante"
             description="Cuando veas la vibrante pantalla de 5.5'' y su increíble diseño metálico, no querrás dejarla. Elige entre los sofisticados acabados en gris metálico, y dorado. "
             img={s1}
-
             color={this.state.color}
           />
           <Slideshow
             title="Sonrisas por todas partes"
             description="Nunca te pierdas un momento. La cámara de enfoque automático de 13 MP toma excelentes fotos, incluso con poca luz. Además, toma selfies dignas de compartir gracias a una cámara de 5MP con su flash para selfies. "
             img={s2}
-
             color={this.state.color}
           />
           <Slideshow
