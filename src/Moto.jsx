@@ -21,9 +21,9 @@ export default class Moto extends Component {
       <div className={styles.container}>
         <Home />
         <Carousel />
-        <Content />
+        {/*<Content />
         <Slider />
-        <Footer />
+        <Footer />*/}
       </div>
     );
   }
