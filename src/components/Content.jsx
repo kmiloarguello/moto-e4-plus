@@ -26,23 +26,28 @@ export default class Content extends Component {
               </p>
               <br />
               <ul>
-                <li>
+                <li className="wow fadeInUp"
+                data-wow-delay=".3s">
                     <img src={s3_pantalla} alt="Pantalla HD"/>
-                    <p>Pantalla HD de 5.5" y diseño metálico.</p>
+                    <p>Pantalla HD de 5.5"<br /> y diseño metálico.</p>
                 </li>
-                <li>
+                <li className="wow fadeInUp"
+                data-wow-delay=".7s">
                     <img src={s3_bateria} alt="Batería de 5000mHh"/>
-                    <p>Batería de 5000mAh y carga rápida.</p>
+                    <p>Batería de 5000mAh<br /> y carga rápida.</p>
                 </li>
-                <li>
+                <li className="wow fadeInUp"
+                data-wow-delay="1.2s">
                     <img src={s3_lector} alt="Lector de huella"/>
-                    <p>Lector de huella digital.</p>
+                    <p>Lector de<br /> huella digital.</p>
                 </li>
-                <li>
+                <li className="wow fadeInUp"
+                data-wow-delay="1.7s">
                     <img src={s3_camaras} alt="Cámaras avanzadas"/>
-                    <p>Cámaras avanzadas.</p>
+                    <p>Cámaras<br /> avanzadas.</p>
                 </li>
-                <li>
+                <li className="wow fadeInUp"
+                data-wow-delay="2.3s">
                     <img src={s3_procesador} alt="Procesador Quad-core"/>
                     <p>Procesador Quad-core y velocidad 4G.</p>
                 </li>

@@ -1,3 +1,5 @@
+@import "../../node_modules/animate.css/animate.css";
+
 @import "./variables.css";
 @import "./home.css";
 @import "./carousel.css";
@@ -6,7 +8,7 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Roboto", "Arial";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   & .container {
     display: grid;
     grid-template-rows: 700px 350px 500px 500px 300px;
@@ -19,7 +21,7 @@ body {
     & .column {
       display: grid;
     }
-    
+
     & .section4 {
       & .column {
         grid-template-columns: 10% 1fr 1fr 10%;

@@ -29,6 +29,7 @@
           margin: auto;
           & li{
               display: inline-block;
+              margin: 30px;
               & img{
                   width: 50px;
                   height: auto;
