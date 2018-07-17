@@ -52,6 +52,7 @@ export default class Content extends Component {
                     <p>Procesador Quad-core y velocidad 4G.</p>
                 </li>
               </ul>
+              <h3>Funciones y ventajas</h3>
             </div>
           </div>
         </div>

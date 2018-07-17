@@ -1,0 +1,13 @@
+.section4 {
+  & .column {
+    grid-template-columns: 10% 1fr 1fr 10%;
+    & .A {
+      border: 3px solid blue;
+      grid-column: 2;
+    }
+    & .B {
+      border: 3px solid blue;
+      grid-column: 3;
+    }
+  }
+}

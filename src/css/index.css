@@ -1,4 +1,4 @@
-@import "../../node_modules/animate.css/animate.css";
+@import "../../node_modules/animate.css/animate.min.css";
 
 @import "./variables.css";
 @import "./home.css";
@@ -11,7 +11,7 @@ body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   & .container {
     display: grid;
-    grid-template-rows: 700px 350px 500px 500px 300px;
+    grid-template-rows: 700px 350px 600px 500px 300px;
 
     & .row {
       display: grid;
@@ -20,20 +20,6 @@ body {
     }
     & .column {
       display: grid;
-    }
-
-    & .section4 {
-      & .column {
-        grid-template-columns: 10% 1fr 1fr 10%;
-        & .A {
-          border: 3px solid blue;
-          grid-column: 2;
-        }
-        & .B {
-          border: 3px solid blue;
-          grid-column: 3;
-        }
-      }
     }
     & .section5 {
       background: #ddd;

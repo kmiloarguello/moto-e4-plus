@@ -10,6 +10,13 @@
           font-size: 2em;
           color: var(--dark-title);
       }
+      & h3{
+        line-height: 60px;
+        font-weight: 300;
+        font-size: 2em;
+        color: var(--dark-title);
+        margin-bottom: 50px;
+    }
       & p{
         color: var(--gray-text);
       }
