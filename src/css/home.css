@@ -80,8 +80,8 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 2048px){
-  .section1{
+@media screen and (min-width: 769px) and (max-width: 2048px) {
+  .section1 {
     background-size: cover !important;
     & .A {
       & img {
@@ -89,6 +89,11 @@
       }
       & h1 {
         font-size: 3.5em !important;
+      }
+    }
+    & .C {
+      & img {
+        left: 30px !important;
       }
     }
   }
@@ -104,6 +109,11 @@
       grid-template-areas:
         "s1-title . "
         "s1-images s1-description" !important;
+      & .C {
+        & img {
+          left: 30px !important;
+        }
+      }
     }
   }
 }
@@ -130,6 +140,7 @@
     }
     & .C {
       & img {
+        border: 2px dashed fuchsia;
         left: 30px !important;
       }
       & #phone_front {
@@ -154,11 +165,11 @@
         "s1-title"
         "s1-images"
         "s1-description" !important;
-        & .C {
-          & img {
-            width: 100%;
-          }
+      & .C {
+        & img {
+          width: 100%;
         }
+      }
     }
   }
 }
