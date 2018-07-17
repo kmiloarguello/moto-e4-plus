@@ -9,6 +9,7 @@ import Home from "./components/Home.jsx";
 import Carousel from "./components/Carousel.jsx";
 import Content from "./components/Content.jsx";
 import Slider from './components/Slider.jsx'
+import Footer from './components/Footer.jsx'
 
 export default class Moto extends Component {
   componentDidMount() {
@@ -22,14 +23,7 @@ export default class Moto extends Component {
         <Carousel />
         <Content />
         <Slider />
-        {/*
-        <section className={styles.section5}>
-          <div className={styles.row}>
-            <div className={styles.column}>
-              <div className={styles.A}>A</div>
-            </div>
-          </div>
-        </section>*/}
+        <Footer />
       </div>
     );
   }

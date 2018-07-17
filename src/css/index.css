@@ -5,6 +5,7 @@
 @import "./carousel.css";
 @import "./content.css";
 @import "./slider.css";
+@import "./footer.css";
 
 body {
   box-sizing: border-box;
@@ -12,25 +13,16 @@ body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   & .container {
     display: grid;
-    grid-template-rows: 700px 350px 600px 500px 300px;
-
+    grid-template-rows: var(--h-s1) var(--h-s2) var(--h-s3) var(--h-s4) var(--h-s5);
+    
     & .row {
       display: grid;
       grid-template-columns: minmax(auto, 90%);
+
       justify-content: center;
     }
     & .column {
       display: grid;
-    }
-    & .section5 {
-      background: #ddd;
-      & .column {
-        grid-template-columns: 10% 1fr 10%;
-        & .A {
-          border: 3px solid blue;
-          grid-column: 2;
-        }
-      }
     }
   }
 }
