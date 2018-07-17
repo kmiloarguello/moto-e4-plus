@@ -7,6 +7,7 @@ import WOW from "wowjs";
 // Components
 import Home from "./components/Home.jsx";
 import Carousel from "./components/Carousel.jsx";
+import Content from "./components/Content.jsx";
 
 export default class Moto extends Component {
   componentDidMount() {
@@ -18,13 +19,8 @@ export default class Moto extends Component {
       <div className={styles.container}>
         <Home />
         <Carousel />
-        {/*<section className={styles.section3}>
-          <div className={styles.row}>
-            <div className={styles.column}>
-              <div className={styles.A}>A</div>
-            </div>
-          </div>
-        </section>
+        <Content />
+        {/*
         <section className={styles.section4}>
           <div className={styles.row}>
             <div className={styles.column}>

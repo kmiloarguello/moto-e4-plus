@@ -13,7 +13,7 @@
     color: white;
 
     & span {
-      color: yellow;
+      color: var(--yellow-title);
     }
     & .A {
       grid-area: s1-title;
@@ -68,7 +68,7 @@
       & #phone_front {
         width: 210px;
         z-index: 2;
-        margin-top: 140px;
+        margin-top: 160px;
         margin-left: 150px;
       }
       & #phone_back {
@@ -105,6 +105,7 @@
         }
       }
       & .B {
+        margin-bottom: 50px;
         & h3 {
           font-size: 0.9em;
           & span {

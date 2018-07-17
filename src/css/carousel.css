@@ -35,7 +35,7 @@
         margin: auto;
       }
       & #bateria {
-        width: 300px;
+        width: 280px;
       }
     }
   }
@@ -43,9 +43,18 @@
 
 @media screen and (max-width: 480px) {
   .section2 {
-    background-size: auto;
+    background-size: cover;
     & .column {
       grid-template-columns: 1fr !important;
+    }
+    & .A, & .B{
+      border-bottom: 1px solid white;
+    }
+    & .C{
+      margin-bottom: 50px;
+    }
+    & #bateria {
+      margin-bottom: 20px;
     }
   }
 }

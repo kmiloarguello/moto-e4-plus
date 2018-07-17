@@ -1,11 +1,12 @@
 @import "./variables.css";
 @import "./home.css";
 @import "./carousel.css";
+@import "./content.css";
 
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial";
   & .container {
     display: grid;
     grid-template-rows: 700px 350px 500px 500px 300px;
@@ -18,16 +19,7 @@ body {
     & .column {
       display: grid;
     }
-    & .section3 {
-      background: #ddd;
-      & .column {
-        grid-template-columns: 10% 1fr 10%;
-        & .A {
-          border: 3px solid blue;
-          grid-column: 2;
-        }
-      }
-    }
+    
     & .section4 {
       & .column {
         grid-template-columns: 10% 1fr 1fr 10%;
