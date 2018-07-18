@@ -58,10 +58,10 @@ export default class Slider extends Component {
       slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" " + styles.active  , "");
     }
     slides[this.state.slideIndex - 1].style.display = "block";
-    dots[this.state.slideIndex - 1].className += " active";
+    dots[this.state.slideIndex - 1].className += " " + styles.active;
 
     /**
      * To do: Refactor of this
