@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider section Slider section snapshot 1`] = `
+<section>
+  <div>
+    <div
+      class="undefined undefined"
+      style="display: none;"
+    >
+      <div>
+        <div>
+          <h2
+            data-testid="title-slideshow"
+            style="color: rgb(51, 63, 72);"
+          >
+            Grande y brillante
+          </h2>
+        </div>
+        <div>
+          <p
+            data-testid="description-slideshow"
+            style="color: rgb(51, 63, 72);"
+          >
+            Cuando veas la vibrante pantalla de 5.5'' y su increíble diseño metálico, no querrás dejarla. Elige entre los sofisticados acabados en gris metálico, y dorado. 
+          </p>
+        </div>
+        <div>
+          <img
+            alt="Grande y brillante"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="undefined undefined"
+      style="display: none;"
+    >
+      <div>
+        <div>
+          <h2
+            data-testid="title-slideshow"
+            style="color: rgb(51, 63, 72);"
+          >
+            Sonrisas por todas partes
+          </h2>
+        </div>
+        <div>
+          <p
+            data-testid="description-slideshow"
+            style="color: rgb(51, 63, 72);"
+          >
+            Nunca te pierdas un momento. La cámara de enfoque automático de 13 MP toma excelentes fotos, incluso con poca luz. Además, toma selfies dignas de compartir gracias a una cámara de 5MP con su flash para selfies. 
+          </p>
+        </div>
+        <div>
+          <img
+            alt="Sonrisas por todas partes"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="undefined undefined"
+      style="display: none;"
+    >
+      <div>
+        <div>
+          <h2
+            data-testid="title-slideshow"
+            style="color: rgb(51, 63, 72);"
+          >
+            Espera lo mejor
+          </h2>
+        </div>
+        <div>
+          <p
+            data-testid="description-slideshow"
+            style="color: rgb(51, 63, 72);"
+          >
+            Funciona con Android 7.1, una versión actualizada del sistema operativo más famosos del mundo. Ahora gastar menos no es sinónimo de conformarse con menos.
+          </p>
+        </div>
+        <div>
+          <img
+            alt="Espera lo mejor"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="undefined undefined"
+      style="display: none;"
+    >
+      <div>
+        <div>
+          <h2
+            data-testid="title-slideshow"
+            style="color: rgb(51, 63, 72);"
+          >
+            Super potente
+          </h2>
+        </div>
+        <div>
+          <p
+            data-testid="description-slideshow"
+            style="color: rgb(51, 63, 72);"
+          >
+            Gracias a la batería de 5000 mAh, puedes usarlo días sin preocuparte por la duración de la batería.1 Y cuando sea hora de recargar, no bajes el ritmo. El Modo E Plus funciona con un cargador rápido de 10W. *El cargador rápido se vende por separado.
+          </p>
+        </div>
+        <div>
+          <img
+            alt="Super potente"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="undefined undefined"
+      style="display: none;"
+    >
+      <div>
+        <div>
+          <h2
+            data-testid="title-slideshow"
+            style="color: rgb(51, 63, 72);"
+          >
+            Toca y continúa
+          </h2>
+        </div>
+        <div>
+          <p
+            data-testid="description-slideshow"
+            style="color: rgb(51, 63, 72);"
+          >
+            Ya no te preocupes si olvidas la contraseña sólo usa tu huella digital y desbloquea el smartphone para que puedas acceder a lo que más te gusta con mayor rapidez.
+          </p>
+        </div>
+        <div>
+          <img
+            alt="Toca y continúa"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <span
+        data-testid="dot-a"
+      />
+      <span
+        data-testid="dot-b"
+      />
+      <span
+        data-testid="dot-c"
+      />
+      <span
+        data-testid="dot-d"
+      />
+      <span
+        data-testid="dot-e"
+      />
+    </div>
+  </div>
+</section>
+`;

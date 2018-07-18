@@ -45,12 +45,20 @@ describe("Slider section", () => {
     const { getByTestId } = render(<Slider />);
 
     fireEvent.click(getByTestId("dot-a"), spy);
+    fireEvent.click(getByTestId("dot-b"), spy);
+    fireEvent.click(getByTestId("dot-c"), spy);
+    fireEvent.click(getByTestId("dot-d"), spy);
+    fireEvent.click(getByTestId("dot-e"), spy);
   });
-  test("Slider change of background", () => {
+  test("Slider section snapshot", () => {
+    const { container } = render(<Slider />);
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test("Slider changes of background", () => {
     const { getByTestId } = render(<Slider />);
     const bg = document.getElementsByClassName(styles.section4)[0];
     bg.style.backgroundImage = "url(" + myImage + ")";
     fireEvent.change(bg);
-    expect(bg.style.backgroundImage).toBe("url(" + myImage + ")")
+    expect(bg.style.backgroundImage).toBe("url(" + myImage + ")");
   });
 });
