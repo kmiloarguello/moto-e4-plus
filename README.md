@@ -13,6 +13,9 @@ Este proyecto fue desarrollado con las siguientes tecnologías:
 - Jest
 - Css-grid
 
+## Mejoras por hacer
+- Dividir el código exportado. `Webpack` por defecto genera un paquete `bundle` donde está todo el código y las librerías, esto tiene consecuencias negativas a la hora de la experiencia de usuario ya que son varios segundos esperando que cargue todo el sitio web. Si se divide el código el pequeños `chunks` de código este mejorará en rendimiento a la hora de cargar.
+
 ## Estructura
 
 El proyecto está dividido por componentes de la siguiente manera.
