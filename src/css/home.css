@@ -172,6 +172,14 @@
         & img {
           width: 100%;
         }
+        & #phone_front {
+          width: 150px !important;
+          margin-top: 60px !important;
+          margin-left: 70px !important;
+        }
+        & #phone_back {
+          width: 130px !important;
+        }
       }
     }
   }
