@@ -5,6 +5,10 @@ import phone_back from "../arquivos/img/section1/back.png";
 import phone_front from "../arquivos/img/section1/front.png";
 
 export default class Home extends Component {
+  constructor(){
+    super()
+    this.handleBuy = this.handleBuy.bind(this)
+  }
   handleBuy() {
     console.log("Should make something!");
   }
@@ -30,9 +34,10 @@ export default class Home extends Component {
                 <span>2 días de batería</span>
               </h3>
               <button
-                onClick={() => this.handleBuy()}
+                onClick={this.handleBuy}
                 className="wow bounceIn"
                 data-wow-delay="2s"
+                data-testid="buy-button"
               >
                 Comprar
               </button>

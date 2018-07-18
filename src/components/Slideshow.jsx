@@ -7,10 +7,10 @@ export default class Slideshow extends Component {
       <div className={styles.slide + " " + styles.fade}>
         <div className={styles.column}>
           <div className={styles.A}>
-            <h2 style={{ color: this.props.color }}>{this.props.title}</h2>
+            <h2  data-testid="title-slideshow" style={{ color: this.props.color }}>{this.props.title}</h2>
           </div>
           <div className={styles.B}>
-            <p style={{ color: this.props.color }}>{this.props.description}</p>
+            <p data-testid="description-slideshow" style={{ color: this.props.color }}>{this.props.description}</p>
           </div>
           <div
             className={styles.C}

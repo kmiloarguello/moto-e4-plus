@@ -64,7 +64,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(__dirname, "src/html/index.html"),
-      title: "Moto e4 Plus"
+      title: "Moto e4 Plus",
+      favicon: path.resolve(__dirname,"src/arquivos/img/Motorola-icon.png")
     }),
     new CopyWebpackPlugin([
       {

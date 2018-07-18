@@ -111,23 +111,13 @@ export default class Slider extends Component {
           />
           <Slideshow
             title="Espera lo mejor"
-            description={[
-              "Funciona con Android",
-              <sup>TM</sup>,
-              " 7.1, una versión actualizada del sistema operativo más famosos del mundo. Ahora gastar menos no es sinónimo de conformarse con menos."
-            ]}
+            description="Funciona con Android 7.1, una versión actualizada del sistema operativo más famosos del mundo. Ahora gastar menos no es sinónimo de conformarse con menos."
             img={s3}
             color={this.state.color}
           />
           <Slideshow
             title="Super potente"
-            description={[
-              "Gracias a la batería de 5000 mAh, puedes usarlo días sin preocuparte por la duración de la batería.1 Y cuando sea hora de recargar, no bajes el ritmo. El ",
-              <strong>Modo E Plus</strong>,
-              "funciona con un cargador rápido de 10W.",
-              <br />,
-              "*El cargador rápido se vende por separado."
-            ]}
+            description="Gracias a la batería de 5000 mAh, puedes usarlo días sin preocuparte por la duración de la batería.1 Y cuando sea hora de recargar, no bajes el ritmo. El Modo E Plus funciona con un cargador rápido de 10W. *El cargador rápido se vende por separado."
             img={s4}
             color={this.state.color}
           />
