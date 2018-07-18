@@ -1,0 +1,18 @@
+.section5 {
+  background: var(--dark-background);
+
+  & .column {
+    grid-template-columns: 10% 1fr 10%;
+    & .A {
+      margin-top: 30px;
+      grid-column: 2;
+      & img{
+        width: 80px;
+      }
+      & p{
+        color: rgba(255,255,255,.8);
+        font-size: .8em;
+      }
+    }
+  }
+}

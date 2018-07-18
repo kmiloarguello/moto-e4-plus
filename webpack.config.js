@@ -29,7 +29,8 @@ module.exports = {
               loader: "css-loader",
               options: {
                 modules: true,
-                importLoaders: 1
+                importLoaders: 1,
+                localIdentName: '[local]'
               }
             },
             "postcss-loader"

@@ -35,17 +35,41 @@
         margin: auto;
       }
       & #bateria {
-        width: 300px;
+        width: 280px;
       }
     }
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 660px) and (max-width: 1024px) {
+  .section2{
+    background-size: cover;
+    & .A,
+    & .B,
+    & .C {
+      & p {
+        padding-left: 20px;
+      }
+      & img {
+        width: 150px !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 659px) {
   .section2 {
-    background-size: auto;
+    background-size: cover;
     & .column {
       grid-template-columns: 1fr !important;
+    }
+    & .A, & .B{
+      border-bottom: 1px solid white;
+    }
+    & .C{
+      margin-bottom: 50px;
+    }
+    & #bateria {
+      margin-bottom: 20px;
     }
   }
 }

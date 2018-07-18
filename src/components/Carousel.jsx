@@ -17,7 +17,11 @@ export default class Carousel extends Component {
                 Toma fotos y selfies sumamente nítidas incluso en condiciones de
                 poca luz con Flash Selfie.
               </p>
-              <img className="wow fadeIn" src={Camara} alt="Cámaras increibles" />
+              <img
+                className="wow fadeIn"
+                src={Camara}
+                alt="Cámaras increibles"
+              />
             </div>
             <div className={styles.B}>
               <h3>Hasta 2 días de batería</h3>
@@ -32,14 +36,20 @@ export default class Carousel extends Component {
                 id={styles.bateria}
                 src={Bateria}
                 alt="Hasta 2 días de batería"
-                className="wow fadeIn" data-wow-delay="1s"
+                className="wow fadeIn"
+                data-wow-delay="1s"
               />
             </div>
             <div className={styles.C}>
               <h3>Lector de huella digital</h3>
               <p>Desbloquea al instante tu teléfono con un touch de tu dedo.</p>
               <p>Desbloquea el smartphone al instante con tu huella digital.</p>
-              <img src={Huella} alt="Lector de huella digital" className="wow fadeIn" data-wow-delay="2s" />
+              <img
+                src={Huella}
+                alt="Lector de huella digital"
+                className="wow fadeIn"
+                data-wow-delay="2s"
+              />
             </div>
           </div>
         </div>

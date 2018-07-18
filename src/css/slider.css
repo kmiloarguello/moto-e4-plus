@@ -1,0 +1,132 @@
+.section4 {
+  background-image: url("../arquivos/img/section4/bg-s1.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100%;
+  animation-name: fade;
+  animation-duration: 0.5s;
+  & .row {
+    grid-template-rows: minmax(var(--h-s4), 1fr);
+  }
+  & .column {
+    grid-template-areas:
+      ". s4-title s4-image ."
+      ". s4-description s4-image ."
+      ". s4-description s4-image .";
+
+    grid-template-columns: 10% 1fr 1fr 10%;
+
+    & .A {
+      grid-area: s4-title;
+      align-self: end;
+      & h2 {
+        line-height: 0;
+        font-weight: 600;
+        font-size: 2em;
+        color: var(--dark-title);
+      }
+    }
+    & .B {
+      grid-area: s4-description;
+      & p {
+        max-width: 70%;
+        letter-spacing: 1.5px;
+        line-height: 25px;
+        font-weight: 300;
+        font-size: 1.3em;
+        color: var(--gray-text);
+      }
+    }
+    & .C {
+      grid-area: s4-image;
+      align-self: center;
+      justify-self: end;
+      & img {
+        width: 70%;
+        animation-name: fade;
+        animation-duration: 2.5s;
+      }
+    }
+  }
+}
+
+.slide {
+  display: none;
+  margin-top: 50px;
+}
+
+#dot_container {
+  text-align: center;
+  margin-top: -30px;
+  & .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border: 1px solid var(--blue-light);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .2s ease;
+  }
+  & .active,
+  & .dot:hover {
+    background-color: var(--blue-light);
+  }
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 660px) and (max-width: 1024px) {
+  .section4 {
+    background-size: cover !important;
+  }
+}
+@media screen and (max-width: 659px) {
+  .section4 {
+    background-size: cover !important;
+    & .column {
+      grid-template-columns: 5% 1fr 5% !important;
+      grid-template-areas:
+        ". s4-title ."
+        ". s4-image ."
+        ". s4-description .";
+        & .A, & .B, & .C {
+          justify-self: center !important;
+        }
+        & .B {
+          & p {
+            max-width: 100%;
+            text-align: justify;
+          }
+        }
+        & .C{
+          & img {
+            width: 100% !important;
+          }
+        }
+    }
+  }
+  #dot_container {
+    margin-top: 0px;
+  }
+}
