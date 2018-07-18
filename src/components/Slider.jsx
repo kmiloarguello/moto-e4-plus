@@ -128,11 +128,11 @@ export default class Slider extends Component {
             color={this.state.color}
           />
           <div id={styles.dot_container}>
-            <span className={styles.dot} onClick={() => this.currentSlide(1)} />
-            <span className={styles.dot} onClick={() => this.currentSlide(2)} />
-            <span className={styles.dot} onClick={() => this.currentSlide(3)} />
-            <span className={styles.dot} onClick={() => this.currentSlide(4)} />
-            <span className={styles.dot} onClick={() => this.currentSlide(5)} />
+            <span data-testid="dot-a" className={styles.dot} onClick={() => this.currentSlide(1)} />
+            <span data-testid="dot-b" className={styles.dot} onClick={() => this.currentSlide(2)} />
+            <span data-testid="dot-c" className={styles.dot} onClick={() => this.currentSlide(3)} />
+            <span data-testid="dot-d" className={styles.dot} onClick={() => this.currentSlide(4)} />
+            <span data-testid="dot-e" className={styles.dot} onClick={() => this.currentSlide(5)} />
           </div>
         </div>
       </section>
