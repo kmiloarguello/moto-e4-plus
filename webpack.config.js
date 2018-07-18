@@ -1,7 +1,7 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin")
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: ["babel-polyfill", path.resolve(__dirname, "src/index.js")],
@@ -29,8 +29,7 @@ module.exports = {
               loader: "css-loader",
               options: {
                 modules: true,
-                importLoaders: 1,
-                localIdentName: '[local]'
+                importLoaders: 1
               }
             },
             "postcss-loader"
@@ -66,6 +65,16 @@ module.exports = {
       inject: true,
       template: path.resolve(__dirname, "src/html/index.html"),
       title: "Moto e4 Plus"
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(
+          __dirname,
+          "node_modules/animate.css/animate.min.css"
+        ),
+        to: path.resolve(__dirname, "dist/css/animate.min.css"),
+        toType: "file"
+      }
+    ])
   ]
 };
