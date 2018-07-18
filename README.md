@@ -60,8 +60,6 @@ Tomado como base el proyecto [Produt-page-jumbo](https://github.com/kmiloarguell
 
 El material de imágenes, videos, fuentes de texto y demás son propiedad de la empresa que me los brinda para el proyecto y yo no tengo propiedad alguna sobre dichos elementos.
 
-El proyecto es con fines de aspiración a una reconocida empresa en Colombia.
-
 ## Acerca de mi
 
 Puede ver más de mi trabajo en [mi sitio web](https://camiloarguello.xyz).
