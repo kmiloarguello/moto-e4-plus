@@ -39,7 +39,6 @@ npm install
 3. Una vez teniendo las dependencias instaladas, lanzar los comandos de Test para verificar que el proyecto esté corriendo correctamente.
 ```
 yarn test
-
 ```
 Por debajo de los test, se ejecutan con [jest](https://jest.io). Para hacer modificaciones de los mismos, dirigirse a su documentación.
 
