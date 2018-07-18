@@ -18,7 +18,11 @@ Este proyecto fue desarrollado con las siguientes tecnologías:
 El proyecto está dividido por componentes de la siguiente manera.
 
 - El componente `Moto` es el padre de todos los demás. En él se encuentran los llamados a los hijos y la información pasada por medio de `props` y `states`.
-- ...
+- `Home` contiente la información de la primer sección.
+- `Carousel` es la tercera sección.
+- `Content` es la cuarta sección.
+- `Slider` es la quinta sección. Esta sección contiene varios componentes hijos llamados `Slideshow` debido a que se repite el slider y se reusa el componente.
+- `Footer` es el ultimo componente.
 
 ## Contribuir al proyecto
 
