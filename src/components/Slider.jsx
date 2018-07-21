@@ -8,11 +8,11 @@ import s3 from "../arquivos/img/section4/s3.png";
 import s4 from "../arquivos/img/section4/s4.png";
 import s5 from "../arquivos/img/section4/s5.png";
 
-// import bg_s1 from "../arquivos/img/section4/bg-s1.png";
-// import bg_s2 from "../arquivos/img/section4/bg-s2.png";
-// import bg_s3 from "../arquivos/img/section4/bg-s3.png";
-// import bg_s4 from "../arquivos/img/section4/bg-s4.png";
-// import bg_s5 from "../arquivos/img/section4/bg-s5.png";
+import bg_s1 from "../arquivos/img/section4/bg-s1.png";
+import bg_s2 from "../arquivos/img/section4/bg-s2.png";
+import bg_s3 from "../arquivos/img/section4/bg-s3.png";
+import bg_s4 from "../arquivos/img/section4/bg-s4.png";
+import bg_s5 from "../arquivos/img/section4/bg-s5.png";
 
 export default class Slider extends Component {
   constructor(props) {
@@ -41,7 +41,7 @@ export default class Slider extends Component {
     let i;
     let slides = document.getElementsByClassName(styles.slide);
     let dots = document.getElementsByClassName(styles.dot);
-    let bg = document.getElementsByClassName(styles.section4)[0];
+    let bg = document.getElementById(styles.section4);
 
     if (n > slides.length) {
       this.setState({
@@ -62,39 +62,36 @@ export default class Slider extends Component {
     slides[this.state.slideIndex - 1].style.display = "block";
     dots[this.state.slideIndex - 1].className += " " + styles.active;
 
-    // console.log(typeof bg.style.backgroundImage);
-    // if (bg.style.backgroundImage) {
-    //   if (this.state.slideIndex == 1) {
-    //     bg.style.backgroundImage = "url(" + bg_s1 + ")";
-    //     this.setState({
-    //       color: "#333f48"
-    //     });
-    //   } else if (this.state.slideIndex == 2) {
-    //     bg.style.backgroundImage = "url(" + bg_s2 + ")";
-    //     this.setState({
-    //       color: "white"
-    //     });
-    //   } else if (this.state.slideIndex == 3) {
-    //     bg.style.backgroundImage = "url(" + bg_s3 + ")";
-    //     this.setState({
-    //       color: "white"
-    //     });
-    //   } else if (this.state.slideIndex == 4) {
-    //     bg.style.backgroundImage = "url(" + bg_s4 + ")";
-    //     this.setState({
-    //       color: "white"
-    //     });
-    //   } else {
-    //     bg.style.backgroundImage = "url(" + bg_s5 + ")";
-    //     this.setState({
-    //       color: "#333f48"
-    //     });
-    //   }
-    // }
+    if (this.state.slideIndex == 2) {
+      bg.style.backgroundImage = "url(" + bg_s2 + ")";
+      this.setState({
+        color: "white"
+      });
+    } else if (this.state.slideIndex == 3) {
+      bg.style.backgroundImage = "url(" + bg_s3 + ")";
+      this.setState({
+        color: "white"
+      });
+    } else if (this.state.slideIndex == 4) {
+      bg.style.backgroundImage = "url(" + bg_s4 + ")";
+      this.setState({
+        color: "white"
+      });
+    } else if(this.state.slideIndex == 5) {
+      bg.style.backgroundImage = "url(" + bg_s5 + ")";
+      this.setState({
+        color: "#333f48"
+      });
+    }else{
+      bg.style.backgroundImage = "url(" + bg_s1 + ")";
+      this.setState({
+        color: "#333f48"
+      });
+    }
   }
   render() {
     return (
-      <section className={styles.section4}>
+      <section id={styles.section4} className={styles.section4}>
         <div className={styles.row}>
           <Slideshow
             title="Grande y brillante"
