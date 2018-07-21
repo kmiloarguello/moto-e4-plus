@@ -62,31 +62,33 @@ export default class Slider extends Component {
     slides[this.state.slideIndex - 1].style.display = "block";
     dots[this.state.slideIndex - 1].className += " " + styles.active;
 
-    if (this.state.slideIndex == 2) {
-      bg.style.backgroundImage = "url(" + bg_s2 + ")";
-      this.setState({
-        color: "white"
-      });
-    } else if (this.state.slideIndex == 3) {
-      bg.style.backgroundImage = "url(" + bg_s3 + ")";
-      this.setState({
-        color: "white"
-      });
-    } else if (this.state.slideIndex == 4) {
-      bg.style.backgroundImage = "url(" + bg_s4 + ")";
-      this.setState({
-        color: "white"
-      });
-    } else if(this.state.slideIndex == 5) {
-      bg.style.backgroundImage = "url(" + bg_s5 + ")";
-      this.setState({
-        color: "#333f48"
-      });
-    }else{
-      bg.style.backgroundImage = "url(" + bg_s1 + ")";
-      this.setState({
-        color: "#333f48"
-      });
+    if (bg) {
+      if (this.state.slideIndex == 2) {
+        bg.style.backgroundImage = "url(" + bg_s2 + ")";
+        this.setState({
+          color: "white"
+        });
+      } else if (this.state.slideIndex == 3) {
+        bg.style.backgroundImage = "url(" + bg_s3 + ")";
+        this.setState({
+          color: "white"
+        });
+      } else if (this.state.slideIndex == 4) {
+        bg.style.backgroundImage = "url(" + bg_s4 + ")";
+        this.setState({
+          color: "white"
+        });
+      } else if (this.state.slideIndex == 5) {
+        bg.style.backgroundImage = "url(" + bg_s5 + ")";
+        this.setState({
+          color: "#333f48"
+        });
+      } else {
+        bg.style.backgroundImage = "url(" + bg_s1 + ")";
+        this.setState({
+          color: "#333f48"
+        });
+      }
     }
   }
   render() {

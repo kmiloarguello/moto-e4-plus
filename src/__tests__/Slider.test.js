@@ -40,10 +40,6 @@ describe("Slider section", () => {
     );
     const altSlideshow = getByAltText("Titulo");
   });
-  test.only("Slider has dots", () => {
-    const { getByTestId } = render(<Slider />);
-    console.log(getByTestId("dots"));
-  });
   test("Span button trigger an event", () => {
     const spy = jest.fn();
     const { getByTestId } = render(<Slider />);
