@@ -5,7 +5,6 @@ import WOW from "wowjs";
 
 function Loading(props) {
   if (props.error) {
-    console.log(props.error);
     return (
       <div className={styles.container_loader}>
         <div className={styles.error}>
