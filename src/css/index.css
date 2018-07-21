@@ -1,6 +1,7 @@
 /* @import "../../node_modules/animate.css/animate.min.css"; */
 
 @import "./variables.css";
+@import "./loading.css";
 @import "./home.css";
 @import "./carousel.css";
 @import "./content.css";

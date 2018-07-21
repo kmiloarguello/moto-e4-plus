@@ -19,7 +19,6 @@ export default class Slider extends Component {
     super(props);
     this.state = {
       slideIndex: 1,
-      isWhite: false,
       color: "#333f48"
     };
   }
@@ -42,7 +41,7 @@ export default class Slider extends Component {
     let i;
     let slides = document.getElementsByClassName(styles.slide);
     let dots = document.getElementsByClassName(styles.dot);
-    let bg = document.getElementsByClassName(styles.section4)[0];
+    let bg = document.getElementById(styles.section4);
 
     if (n > slides.length) {
       this.setState({
@@ -58,20 +57,12 @@ export default class Slider extends Component {
       slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" " + styles.active  , "");
+      dots[i].className = dots[i].className.replace(" " + styles.active, " ");
     }
     slides[this.state.slideIndex - 1].style.display = "block";
     dots[this.state.slideIndex - 1].className += " " + styles.active;
 
-    /**
-     * To do: Refactor of this
-     */
-    if (this.state.slideIndex == 1) {
-      bg.style.backgroundImage = "url(" + bg_s1 + ")";
-      this.setState({
-        color: "#333f48"
-      });
-    } else if (this.state.slideIndex == 2) {
+    if (this.state.slideIndex == 2) {
       bg.style.backgroundImage = "url(" + bg_s2 + ")";
       this.setState({
         color: "white"
@@ -86,8 +77,13 @@ export default class Slider extends Component {
       this.setState({
         color: "white"
       });
-    } else {
+    } else if(this.state.slideIndex == 5) {
       bg.style.backgroundImage = "url(" + bg_s5 + ")";
+      this.setState({
+        color: "#333f48"
+      });
+    }else{
+      bg.style.backgroundImage = "url(" + bg_s1 + ")";
       this.setState({
         color: "#333f48"
       });
@@ -95,7 +91,7 @@ export default class Slider extends Component {
   }
   render() {
     return (
-      <section className={styles.section4}>
+      <section id={styles.section4} className={styles.section4}>
         <div className={styles.row}>
           <Slideshow
             title="Grande y brillante"
@@ -127,12 +123,33 @@ export default class Slider extends Component {
             img={s5}
             color={this.state.color}
           />
-          <div id={styles.dot_container}>
-            <span data-testid="dot-a" className={styles.dot} onClick={() => this.currentSlide(1)} />
-            <span data-testid="dot-b" className={styles.dot} onClick={() => this.currentSlide(2)} />
-            <span data-testid="dot-c" className={styles.dot} onClick={() => this.currentSlide(3)} />
-            <span data-testid="dot-d" className={styles.dot} onClick={() => this.currentSlide(4)} />
-            <span data-testid="dot-e" className={styles.dot} onClick={() => this.currentSlide(5)} />
+
+          <div data-testid="dots" id={styles.dot_container}>
+            <span
+              data-testid="dot-a"
+              className={styles.dot}
+              onClick={() => this.currentSlide(1)}
+            />
+            <span
+              data-testid="dot-b"
+              className={styles.dot}
+              onClick={() => this.currentSlide(2)}
+            />
+            <span
+              data-testid="dot-c"
+              className={styles.dot}
+              onClick={() => this.currentSlide(3)}
+            />
+            <span
+              data-testid="dot-d"
+              className={styles.dot}
+              onClick={() => this.currentSlide(4)}
+            />
+            <span
+              data-testid="dot-e"
+              className={styles.dot}
+              onClick={() => this.currentSlide(5)}
+            />
           </div>
         </div>
       </section>
