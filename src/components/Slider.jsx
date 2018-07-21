@@ -8,18 +8,17 @@ import s3 from "../arquivos/img/section4/s3.png";
 import s4 from "../arquivos/img/section4/s4.png";
 import s5 from "../arquivos/img/section4/s5.png";
 
-import bg_s1 from "../arquivos/img/section4/bg-s1.png";
-import bg_s2 from "../arquivos/img/section4/bg-s2.png";
-import bg_s3 from "../arquivos/img/section4/bg-s3.png";
-import bg_s4 from "../arquivos/img/section4/bg-s4.png";
-import bg_s5 from "../arquivos/img/section4/bg-s5.png";
+// import bg_s1 from "../arquivos/img/section4/bg-s1.png";
+// import bg_s2 from "../arquivos/img/section4/bg-s2.png";
+// import bg_s3 from "../arquivos/img/section4/bg-s3.png";
+// import bg_s4 from "../arquivos/img/section4/bg-s4.png";
+// import bg_s5 from "../arquivos/img/section4/bg-s5.png";
 
 export default class Slider extends Component {
   constructor(props) {
     super(props);
     this.state = {
       slideIndex: 1,
-      isWhite: false,
       color: "#333f48"
     };
   }
@@ -58,40 +57,40 @@ export default class Slider extends Component {
       slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" " + styles.active  , "");
+      dots[i].className = dots[i].className.replace(" " + styles.active, " ");
     }
     slides[this.state.slideIndex - 1].style.display = "block";
     dots[this.state.slideIndex - 1].className += " " + styles.active;
 
-    /**
-     * To do: Refactor of this
-     */
-    if (this.state.slideIndex == 1) {
-      bg.style.backgroundImage = "url(" + bg_s1 + ")";
-      this.setState({
-        color: "#333f48"
-      });
-    } else if (this.state.slideIndex == 2) {
-      bg.style.backgroundImage = "url(" + bg_s2 + ")";
-      this.setState({
-        color: "white"
-      });
-    } else if (this.state.slideIndex == 3) {
-      bg.style.backgroundImage = "url(" + bg_s3 + ")";
-      this.setState({
-        color: "white"
-      });
-    } else if (this.state.slideIndex == 4) {
-      bg.style.backgroundImage = "url(" + bg_s4 + ")";
-      this.setState({
-        color: "white"
-      });
-    } else {
-      bg.style.backgroundImage = "url(" + bg_s5 + ")";
-      this.setState({
-        color: "#333f48"
-      });
-    }
+    // console.log(typeof bg.style.backgroundImage);
+    // if (bg.style.backgroundImage) {
+    //   if (this.state.slideIndex == 1) {
+    //     bg.style.backgroundImage = "url(" + bg_s1 + ")";
+    //     this.setState({
+    //       color: "#333f48"
+    //     });
+    //   } else if (this.state.slideIndex == 2) {
+    //     bg.style.backgroundImage = "url(" + bg_s2 + ")";
+    //     this.setState({
+    //       color: "white"
+    //     });
+    //   } else if (this.state.slideIndex == 3) {
+    //     bg.style.backgroundImage = "url(" + bg_s3 + ")";
+    //     this.setState({
+    //       color: "white"
+    //     });
+    //   } else if (this.state.slideIndex == 4) {
+    //     bg.style.backgroundImage = "url(" + bg_s4 + ")";
+    //     this.setState({
+    //       color: "white"
+    //     });
+    //   } else {
+    //     bg.style.backgroundImage = "url(" + bg_s5 + ")";
+    //     this.setState({
+    //       color: "#333f48"
+    //     });
+    //   }
+    // }
   }
   render() {
     return (
@@ -127,12 +126,33 @@ export default class Slider extends Component {
             img={s5}
             color={this.state.color}
           />
-          <div id={styles.dot_container}>
-            <span data-testid="dot-a" className={styles.dot} onClick={() => this.currentSlide(1)} />
-            <span data-testid="dot-b" className={styles.dot} onClick={() => this.currentSlide(2)} />
-            <span data-testid="dot-c" className={styles.dot} onClick={() => this.currentSlide(3)} />
-            <span data-testid="dot-d" className={styles.dot} onClick={() => this.currentSlide(4)} />
-            <span data-testid="dot-e" className={styles.dot} onClick={() => this.currentSlide(5)} />
+
+          <div data-testid="dots" id={styles.dot_container}>
+            <span
+              data-testid="dot-a"
+              className={styles.dot}
+              onClick={() => this.currentSlide(1)}
+            />
+            <span
+              data-testid="dot-b"
+              className={styles.dot}
+              onClick={() => this.currentSlide(2)}
+            />
+            <span
+              data-testid="dot-c"
+              className={styles.dot}
+              onClick={() => this.currentSlide(3)}
+            />
+            <span
+              data-testid="dot-d"
+              className={styles.dot}
+              onClick={() => this.currentSlide(4)}
+            />
+            <span
+              data-testid="dot-e"
+              className={styles.dot}
+              onClick={() => this.currentSlide(5)}
+            />
           </div>
         </div>
       </section>
