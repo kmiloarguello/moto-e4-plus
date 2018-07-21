@@ -83,6 +83,7 @@
     "webpack-serve": "^2.0.2"
   },
   "dependencies": {
+    "babel-plugin-dynamic-import-node": "^2.0.0",
     "babel-polyfill": "^6.26.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

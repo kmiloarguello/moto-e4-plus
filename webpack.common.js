@@ -64,7 +64,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
     new ExtractTextPlugin("css/moto-e4-plus-[name].css"),
     new HtmlWebpackPlugin({
       inject: true,
