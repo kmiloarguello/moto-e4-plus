@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/kmiloarguello/moto-e4-plus.svg?branch=master)](https://travis-ci.org/kmiloarguello/moto-e4-plus)
 ![npm](https://img.shields.io/npm/l/express.svg)
+[![node](https://img.shields.io/node/v/passport.svg)](https://github.com/kmiloarguello/moto-e4-plus)
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://github.com/kmiloarguello/moto-e4-plus)
+[![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/kmiloarguello/moto-e4-plus)
+[![Prettier](https://img.shields.io/badge/code--styling-prettier-ff69b4.svg)](https://img.shields.io/badge/code--styling-prettier-ff69b4.svg)
 
 Maquetación del sitio web del nuevo Moto e4 Plus, donde se resaltan las características principales del producto en cuanto a estética, diseño y ergonomía. Así como sus funcionalidades de cámara, batería y huella digital.
 
