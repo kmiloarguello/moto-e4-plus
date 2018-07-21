@@ -42,11 +42,15 @@ yarn test
 ```
 Por debajo de los test, se ejecutan con [jest](https://jest.io). Para hacer modificaciones de los mismos, dirigirse a su documentación.
 
-4. Crear el paquete de distribución por medio de [webpack](https://webpack.js.org).
+4. Crear el paquete de distribución por medio de [webpack](https://webpack.js.org). Este comando lanza un servidor para poder visualizar los cambios.
 ```
 yarn run dev
 ```
-5. Ver en el navegador. Una vez que se creó la carpeta `dist`, puede abrirla y ver los cambios en el navegador. También puede hacer uso de `node` para lanzar un servidor y ver el resultado.
+5. Si se requiere crear el paquete de producción/distribución puede hacerlo por medio del comando.
+```
+yarn run prod
+```
+Ver en el navegador. Una vez que se creó la carpeta `dist`, puede abrirla, o subirla a su servidor y ver los cambios en el navegador. 
 
 ## Pruebas
 
