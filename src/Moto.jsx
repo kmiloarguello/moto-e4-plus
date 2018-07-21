@@ -1,14 +1,63 @@
 import React, { Component } from "react";
 import styles from "./css/index.css";
-
+import Loadable from "react-loadable";
 import WOW from "wowjs";
 
-// Components
-import Home from "./components/Home.jsx";
-import Carousel from "./components/Carousel.jsx";
-import Content from "./components/Content.jsx";
-import Slider from "./components/Slider.jsx";
-import Footer from "./components/Footer.jsx";
+function Loading(props) {
+  if (props.error) {
+    return (
+      <div className={styles.container_loader}>
+        <div className={styles.error}>
+          Lo sentimos hubo un error!
+          <br />
+          <button onClick={props.retry}>Reintentar</button>
+        </div>
+      </div>
+    );
+  } else if (props.timedOut) {
+    return (
+      <div className={styles.container_loader}>
+        <div className={styles.error}>
+          Esta sección está tomando demasiado tiempo para cargar...
+          <br />
+          <button onClick={props.retry}>Reintentar</button>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className={styles.container_loader}>
+        <div className={styles.loader} />
+      </div>
+    );
+  }
+}
+
+const AsyncHome = Loadable({
+  loader: () => import("./components/Home.jsx"),
+  loading: Loading,
+  timeout: 20000
+});
+const AsyncCarousel = Loadable({
+  loader: () => import("./components/Carousel.jsx"),
+  loading: Loading,
+  timeout: 20000
+});
+const AsyncContent = Loadable({
+  loader: () => import("./components/Content.jsx"),
+  loading: Loading,
+  timeout: 20000
+});
+const AsyncSlider = Loadable({
+  loader: () => import("./components/Slider.jsx"),
+  loading: Loading,
+  timeout: 20000
+});
+const AsyncFooter = Loadable({
+  loader: () => import("./components/Footer.jsx"),
+  loading: Loading,
+  timeout: 20000
+});
 
 export default class Moto extends Component {
   componentDidMount() {
@@ -23,11 +72,11 @@ export default class Moto extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <Home />
-        <Carousel />
-        <Content />
-        <Slider />
-        <Footer />
+        <AsyncHome />
+        <AsyncCarousel />
+        <AsyncContent />
+        <AsyncSlider />
+        <AsyncFooter />
       </div>
     );
   }

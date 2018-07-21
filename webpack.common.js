@@ -1,13 +1,16 @@
 const path = require("path");
+const CleanWebpackPlugin = require("clean-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
+
 module.exports = {
   entry: ["babel-polyfill", path.resolve(__dirname, "src/index.js")],
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "js/moto-e4-plus-[name].js"
+    filename: "js/moto-e4-plus-[name].js",
+    chunkFilename: 'js/[name].bundle.js',
+    path: path.resolve(__dirname, "dist")
   },
   module: {
     rules: [
@@ -66,7 +69,7 @@ module.exports = {
       inject: true,
       template: path.resolve(__dirname, "src/html/index.html"),
       title: "Moto e4 Plus",
-      favicon: path.resolve(__dirname,"src/arquivos/img/Motorola-icon.png")
+      favicon: path.resolve(__dirname, "src/arquivos/img/Motorola-icon.png")
     }),
     new CopyWebpackPlugin([
       {

@@ -14,7 +14,7 @@ describe("Slider section", () => {
       <Slideshow
         title="titlee"
         description="description"
-        img=""
+        img={myImage}
         color={"red"}
       />
     );
