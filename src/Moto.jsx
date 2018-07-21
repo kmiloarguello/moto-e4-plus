@@ -37,27 +37,27 @@ function Loading(props) {
 const AsyncHome = Loadable({
   loader: () => import("./components/Home.jsx"),
   loading: Loading,
-  timeout: 10000
+  timeout: 20000
 });
 const AsyncCarousel = Loadable({
   loader: () => import("./components/Carousel.jsx"),
   loading: Loading,
-  timeout: 10000
+  timeout: 20000
 });
 const AsyncContent = Loadable({
   loader: () => import("./components/Content.jsx"),
   loading: Loading,
-  timeout: 10000
+  timeout: 20000
 });
 const AsyncSlider = Loadable({
   loader: () => import("./components/Slider.jsx"),
   loading: Loading,
-  timeout: 10000
+  timeout: 20000
 });
 const AsyncFooter = Loadable({
   loader: () => import("./components/Footer.jsx"),
   loading: Loading,
-  timeout: 10000
+  timeout: 20000
 });
 
 export default class Moto extends Component {
